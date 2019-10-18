@@ -12,4 +12,6 @@
 *.out
 
 # local binary
-root-ca-creator
+ca-util
+
+.vscode

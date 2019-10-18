@@ -1,4 +1,4 @@
-module lilley2412/root-ca-creator
+module github.com/lilley2412/ca-util
 
 go 1.13
 

@@ -27,6 +27,6 @@ FROM alpine:3.10.2
 
 WORKDIR /app
 
-COPY --from=builder /app/root-ca-creator .
+COPY --from=builder /app/ca-util .
 
-CMD ["/app/root-ca-creator", "help"]
+CMD ["/app/ca-util", "help"]

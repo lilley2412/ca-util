@@ -1,0 +1,24 @@
+certAuthorities:
+# ca with default values
+- commonName: my default root CA
+# ca with customized values
+- organization: my org
+  commonName: my root CA
+  validSinceDuration: 24h
+  validForDuration: 87600h
+# ca with dns names, can be used for tls server hosting
+- organization: my org
+  commonName: my self-signa CA with DNS names
+  validSinceDuration: 24h
+  validForDuration: 87600h
+  dnsNames:
+  - "*.svc.cluster.local"
+# create a CA and create some signed certs from it
+- commonName: my root CA
+  signedCerts:
+  - commonName: myapp.default.svc.cluster.local
+    validSinceDuration: 24h
+    validForDuration: 48h
+    dnsNames:
+    - "*.myapp.default.svc.cluster.local"
+    - "*.default.svc.cluster.local"
